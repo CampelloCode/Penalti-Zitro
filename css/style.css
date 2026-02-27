@@ -1,0 +1,176 @@
+:root {
+    --bg: #33003b;
+    --cont: #fff;
+    --msg: #e5ff00;
+
+    --tt: clamp(2.5rem, 4.5vw, 6rem);
+    --txt: clamp(1.5rem, 2vw, 2.5rem);
+    
+    --space: clamp(1rem, 1.5vw, 2rem);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin: 0;
+    padding: 0;
+    background-color: var(--bg);
+    font-family: "Montserrat", arial;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--cont);
+
+    padding: var(--space);
+
+    max-width: 900px;
+    max-height: 1100px;
+}
+
+h1{
+    font-size: var(--tt);
+    color: var(--bg);
+    font-weight: bold;
+    margin: 0;
+}
+
+.placar{
+    display: flex;
+    gap: 3rem;
+}
+
+.time{
+    font-size: var(--txt);
+    font-weight: 600;
+}
+
+.time p{
+    margin: 0;
+}
+
+#mensagem{
+    background-color: var(--bg);
+    font-size: var(--txt);
+    color: var(--msg);
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 35px;
+}
+
+.jogo {
+    position: relative;
+    width: 850px;
+    margin: 0 auto;
+}
+
+.campo {
+    width: 100%;
+    display: block;
+    border: var(--bg) 5px solid;
+}
+
+#mobile{
+    display: none;
+}
+
+.gol{
+    position: absolute;
+    top: 170px;
+    left: 180px;
+    width: 500px;
+    height: 150px;
+    display: flex;
+}
+
+.zona{
+    flex: 1;
+    cursor: pointer;
+}
+
+/*.zona:hover{
+    background: rgba(255,0,0,0.2);
+}*/
+
+.goleiro{
+    position: absolute;
+    width: 180px;
+    top: 180px;
+    left: 340px;
+    z-index: 2;
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.bola{
+    position: absolute;
+    width: 50px;
+    bottom: 30px;
+    left: 410px;
+    transition:
+        left 0.4s ease,
+        top 0.4s ease,
+        opacity 0.6s ease;;
+    z-index: 3;
+}
+
+#fim{
+    font-size: var(--txt);
+    color: var(--bg);
+}
+
+@media (max-width:500px){
+    .container{
+        max-width: 360px;
+    }
+
+    .jogo{
+        width: 360px;
+        position: relative;
+    }
+
+    #desktop{
+        display: none;
+    }
+
+    #mobile{
+        display: block;
+        max-width: 355px;
+    }
+
+    .campo{
+        border: var(--bg) solid 2px;
+    }
+    
+    .gol{
+        top: 90px;
+        left: 30px;
+        width: 300px;
+        height: 110px;
+    }
+
+    .goleiro{
+        width: 120px;
+        top: 105px;
+        left: 125px;
+        z-index: 2;
+    }
+
+    .bola{
+        width: 40px;
+        bottom: 30px;
+        left: 165px;
+        transition:
+            left 0.4s ease,
+            top 0.4s ease,
+            opacity 0.6s ease;;
+        z-index: 3;
+    }
+}

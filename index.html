@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Penalti Zitro</title>
+    
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="container">
+        <!--Título-->
+        <h1>PENALTI ZITRO</h1>
+        <!--Placar-->
+        <div class="placar">
+            <div class="time" id="timeA">
+                <!--<img src="" alt="">-->
+                <p class="placar-nome">Você</p>
+                <p class="contador" id="contador-timeA">0</p>
+            </div>
+            <div class="time" id="timeB">
+                <!--<img src="" alt="">-->
+                <p class="placar-nome">Adversário</p>
+                <p class="contador" id="contador-timeB">0</p>
+            </div>
+        </div>
+        
+        <div id="mensagem"></div>
+
+        <!--Imagens-->
+        <div class="jogo">
+            <img class="campo" id="desktop" src="./img/campo.jpg" alt="Imagem do campo e do gol">
+            <img src="./img/mobile.jpg" alt="Imagem do campo e do gol" class="campo" id="mobile">
+            <div class="gol">
+                <div class="zona" id="esquerda"></div>
+                <div class="zona" id="centro"></div>
+                <div class="zona" id="direita"></div>
+            </div>
+            <img class="goleiro" src="./img/neutro.png" alt="goleiro na posição neutra">
+            <img class="bola" src="./img/bola.png" alt="imagem da bola">
+        </div>
+
+        <div id="fim"></div>
+
+        <!--JAVASCRIPT-->
+        <script src="./js/script.js"></script>
+    </div>
+</body>
+</html>
